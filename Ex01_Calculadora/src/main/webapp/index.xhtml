@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Calculadora</title>
+    </h:head>
+    <h:body style="background-color: #EFEFEF">
+        <h:form>
+            <p:panel header="Calculadora" style="width: 250px; margin:0 auto;">
+                <p:inputText value="#{ct.visor}" disabled="true" style="text-align: right; width:100%; margin-bottom: 5px"/>
+                <h:panelGrid columns="4" style="width: 100%; margin-bottom: 5px">
+                    <p:commandButton action="#{ct.bt07(a)}" update="@form" value="7" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt08(a)}" update="@form" value="8" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt09(a)}" update="@form" value="9" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.btSoma(a)}" update="@form" value="+" styleClass="ui-button-raised ui-button-danger" style="width: 50px"/>
+                </h:panelGrid>
+                <h:panelGrid columns="4" style="width: 100%; margin-bottom: 5px">
+                    <p:commandButton action="#{ct.bt04(a)}" update="@form" value="4" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt05(a)}" update="@form" value="5" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt06(a)}" update="@form" value="6" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.btMenos(a)}" update="@form" value="-" styleClass="ui-button-raised ui-button-warning" style="width: 50px"/>
+                </h:panelGrid>
+                <h:panelGrid columns="4" style="width: 100%; margin-bottom: 5px">
+                    <p:commandButton action="#{ct.bt01(a)}" update="@form" value="1" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt02(a)}" update="@form" value="2" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt03(a)}" update="@form" value="3" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.btDiv(a)}" update="@form" value="/" styleClass="ui-button-raised ui-button-secondary" style="width: 50px"/>
+                </h:panelGrid>
+                <h:panelGrid columns="4" style="width: 100%; margin-bottom: 5px">
+                    <p:commandButton action="#{ct.btLimpa(a)}" update="@form" value="C" styleClass="ui-button-raised ui-button-danger" style="width: 50px"/>
+                    <p:commandButton action="#{ct.bt00(a)}" update="@form" value="0" styleClass="ui-button-raised" style="width: 50px"/>
+                    <p:commandButton action="#{ct.btRes(a)}" update="@form" value="=" styleClass="ui-button-raised ui-button-success" style="width: 50px"/>
+                    <p:commandButton action="#{ct.btMult(a)}" update="@form" value="X" styleClass="ui-button-raised ui-button-help" style="width: 50px"/>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
