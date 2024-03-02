@@ -15,6 +15,7 @@ public class Bean implements Serializable {
     private double n1;
     private double n2;
     private double res;
+    private boolean vef;
     private String op;
     
     public void bt07(ActionEvent a){
@@ -25,8 +26,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "7";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("7");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "7";
+            setVisor(aux);
         }
     }//bt07
     
@@ -38,8 +45,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "8";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("8");
+            vef = false;
+        }else{            
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "8";
+            setVisor(aux);
         }
     }//bt08
     
@@ -51,8 +64,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "9";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("9");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "9";
+            setVisor(aux);
         }
     }//bt09
     
@@ -64,8 +83,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "4";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("4");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "4";
+            setVisor(aux);
         }
     }//bt04
     
@@ -77,8 +102,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "5";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("5");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "5";
+            setVisor(aux);
         }
     }//bt05
     
@@ -90,8 +121,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "6";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("6");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "6";
+            setVisor(aux);
         }
     }//bt06
     
@@ -103,8 +140,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "1";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
-            setVisor("2");
+        }else if(vef == true){
+            setVisor("1");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "1";
+            setVisor(aux);
         }
     }//bt01
     
@@ -116,8 +159,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "2";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("2");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "2";
+            setVisor(aux);
         }
     }//bt02
     
@@ -129,8 +178,14 @@ public class Bean implements Serializable {
             //armazenar o valor atual no visor
             aux += "3";
             setVisor(aux);
-        }else if(!getVisor().equals("0") && getOp() != null){
+        }else if(vef == true){
             setVisor("3");
+            vef = false;
+        }else{
+            String aux = getVisor();
+            //armazenar o valor atual no visor
+            aux += "3";
+            setVisor(aux);
         }
     }//bt03
     
@@ -149,29 +204,31 @@ public class Bean implements Serializable {
         setN2(0);
         setRes(0);
         setOp("");
+        vef = false;
     }
     
     public void btSoma(ActionEvent a){
         setOp("+");
         setN1(Double.parseDouble(getVisor()));
+        vef = true;
     }//btSoma
     
     public void btMenos(ActionEvent a){
         setOp("-");
         setN1(Double.parseDouble(getVisor()));
-        setVisor("0");
+        vef = true;
     }//btMenos
     
     public void btMult(ActionEvent a){
         setOp("X");
         setN1(Double.parseDouble(getVisor()));
-        setVisor("0");
+        vef = true;
     }//btMult
     
     public void btDiv(ActionEvent a){
         setOp("/");
         setN1(Double.parseDouble(getVisor()));
-        setVisor("0");
+        vef = true;
     }//btDiv
     
     public void btRes(ActionEvent a){
