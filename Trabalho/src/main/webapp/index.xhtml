@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Trabalho 1 - Primefaces</title>
+        <h:outputStylesheet name="estilos.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset legend="Trabalho 01" style="margin: 0 auto; width: 200px">
+                <p:commandLink action="#{ct.btExA(a)}" value="Ex A)" /><br/>
+                <p:commandLink action="#{ct.btExB(a)}" value="Ex B)" /><br/>
+                <p:commandLink action="#{ct.btExC(a)}" value="Ex C)" /><br/>
+                <p:commandLink action="#{ct.btExD(a)}" value="Ex D)" />
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>
